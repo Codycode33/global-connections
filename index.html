@@ -22,20 +22,32 @@
       align-items: center;
       text-align: center;
     }
-    .wave {
+    .wave, .wave2 {
       position: absolute;
       bottom: 0;
       width: 200%;
-      height: 120px;
-      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 20%, transparent 60%);
-      background-repeat: repeat-x;
-      background-size: 1000px 100px;
-      animation: waveMove 30s linear infinite;
-      opacity: 0.5;
+      height: 100px;
+      background: url('https://svgshare.com/i/uZj.svg') repeat-x;
+      background-size: cover;
+      opacity: 0.4;
+    }
+    .wave {
+      animation: waveMove 20s linear infinite;
+      z-index: 0;
+    }
+    .wave2 {
+      animation: waveMove2 35s linear infinite;
+      bottom: 10px;
+      opacity: 0.3;
+      z-index: 0;
     }
     @keyframes waveMove {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 0; }
+      0% { background-position-x: 0; }
+      100% { background-position-x: 1000px; }
+    }
+    @keyframes waveMove2 {
+      0% { background-position-x: 1000px; }
+      100% { background-position-x: 0; }
     }
     .header-content {
       z-index: 1;
@@ -126,7 +138,7 @@
 
 <header class="animated-header">
   <div class="header-content">
-    <h1 style="font-size:10vw">Global Connections</h1>
+    <h1 style="font-size:1vw">Global Connections</h1>
     <p>Connecting Regions. Creating Opportunities.</p>
   </div>
   <div class="wave"></div>
