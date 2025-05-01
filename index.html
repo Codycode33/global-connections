@@ -30,37 +30,22 @@
       color: white;
     }
 
-    .wave, .wave2 {
+    .wave {
       position: absolute;
       bottom: 0;
-      width: 200%;
+      width: 300%;
       height: 100px;
       background: url('https://svgshare.com/i/uZj.svg') repeat-x;
       background-size: cover;
       opacity: 0.4;
-    }
-
-    .wave {
       animation: waveMove 20s linear infinite;
       z-index: 1;
     }
 
-    .wave2 {
-      animation: waveMoveReverse 30s linear infinite;
-      bottom: 10px;
-      opacity: 0.3;
-      z-index: 1;
+    @keyframes waveMove {
+      0% { background-position-x: 0; }
+      100% { background-position-x: 1000px; }
     }
-
-@keyframes waveMove {
-  0% { background-position-x: 0; }
-  100% { background-position-x: 1000px; }
-}
-
-@keyframes waveMoveReverse {
-  0% { background-position-x: 1000px; }
-  100% { background-position-x: 0; }
-}
 
     nav {
       display: flex;
