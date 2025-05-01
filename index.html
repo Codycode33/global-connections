@@ -15,35 +15,33 @@
 
     .animated-header {
       position: relative;
-      height: 250px;
+      height: 300px;
       overflow: hidden;
-      background-color: #4B0082;
+      background: linear-gradient(
+        270deg,
+        #4B0082, /* Royal Indigo */
+        #00BCD4, /* Aqua Blue */
+        #FF7043, /* Sunset Orange */
+        #4B0082  /* Royal Indigo again to loop */
+      );
+      background-size: 600% 600%;
+      animation: rainbowWave 20s ease infinite;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
     }
 
+    @keyframes rainbowWave {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .header-content {
       z-index: 2;
       position: relative;
       color: white;
-    }
-
-    .wave {
-      position: absolute;
-      bottom: 0;
-      width: 300%;
-      height: 100px;
-      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwMCIgaGVpZ2h0PSIxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAsNTAgQyA1MCw3MCAxMDAsMzAgMTUwLDUwIEMgMjAwLDcwIDI1MCwzMCAzMDAsNTAgQyAzNTAsNzAgNDAwLDMwIDQ1MCw1MCBDIDUwMCw3MCA1NTAsMzAgNjAwLDUwIEMgNjUwLDcwIDcwMCwzMCA3NTAsNTAgQyA4MDAsNzAgODUwLDMwIDkwMCw1MCBDIDk1MCw3MCAxMDAwLDMwIDEwNTAsNTAgQyAxMTAwLDcwIDExNTAsMzAgMTIwMCw1MCBDIDEyNTAsNzAgMTMwMCwzMCAxMzUwLDUwIEMgMTQwMCw3MCAxNDUwLDMwIDE1MDAsNTAgTCAxNTAwLDEwMCBMIDAsMTAwIFoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjQiLz48L3N2Zz4=') repeat-x;
-      background-size: cover;
-      opacity: 0.4;
-      animation: waveMove 20s linear infinite;
-      z-index: 1;
-    }
-    @keyframes waveMove {
-      0% { background-position-x: 0; }
-      100% { background-position-x: 1000px; }
     }
 
     nav {
