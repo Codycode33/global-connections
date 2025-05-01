@@ -22,32 +22,33 @@
       align-items: center;
       text-align: center;
     }
-    .wave, .wave2 {
+    .block-wave {
       position: absolute;
       bottom: 0;
-      width: 200%;
+      width: 300%;
       height: 100px;
-      background: url('https://svgshare.com/i/uZj.svg') repeat-x;
-      background-size: cover;
-      opacity: 0.4;
-    }
-    .wave {
-      animation: waveMove 20s linear infinite;
+      display: flex;
+      animation: blockMove 25s linear infinite;
       z-index: 0;
     }
-    .wave2 {
-      animation: waveMove2 35s linear infinite;
-      bottom: 10px;
-      opacity: 0.3;
-      z-index: 0;
+    .block {
+      width: 100px;
+      height: 100px;
+      background-color: #00BCD4;
+      margin-right: 10px;
+      transform: translateY(0);
     }
-    @keyframes waveMove {
-      0% { background-position-x: 0; }
-      100% { background-position-x: 1000px; }
+    .block:nth-child(odd) {
+      transform: translateY(10px);
+      background-color: #4B0082;
     }
-    @keyframes waveMove2 {
-      0% { background-position-x: 1000px; }
-      100% { background-position-x: 0; }
+    .block:nth-child(even) {
+      transform: translateY(-10px);
+      background-color: #FF7043;
+    }
+    @keyframes blockMove {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
     .header-content {
       z-index: 1;
@@ -138,10 +139,18 @@
 
 <header class="animated-header">
   <div class="header-content">
-    <h1 style="font-size:1vw">Global Connections</h1>
+    <h1>Global Connections</h1>
     <p>Connecting Regions. Creating Opportunities.</p>
   </div>
-  <div class="wave"></div>
+  <div class="block-wave">
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+  </div>
 </header>
 
 <nav>
@@ -197,4 +206,3 @@
 
 </body>
 </html>
-
