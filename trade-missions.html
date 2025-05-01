@@ -30,37 +30,21 @@
       color: white;
     }
 
-    .wave, .wave2 {
+    .wave {
       position: absolute;
       bottom: 0;
-      width: 200%;
+      width: 300%;
       height: 100px;
-      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 20%, transparent 60%);
-      background-repeat: repeat-x;
-      background-size: 1000px 100px;
+      background: url('https://svgshare.com/i/uZj.svg') repeat-x;
+      background-size: cover;
       opacity: 0.4;
-    }
-
-    .wave {
       animation: waveMove 20s linear infinite;
       z-index: 1;
     }
 
-    .wave2 {
-      animation: waveMoveReverse 30s linear infinite;
-      bottom: 10px;
-      opacity: 0.3;
-      z-index: 1;
-    }
-
     @keyframes waveMove {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 0; }
-    }
-
-    @keyframes waveMoveReverse {
-      0% { background-position: 1000px 0; }
-      100% { background-position: 0 0; }
+      0% { background-position-x: 0; }
+      100% { background-position-x: 1000px; }
     }
 
     nav {
@@ -102,7 +86,6 @@
     <p>Unlock Global Opportunities Through Targeted Trade Missions</p>
   </div>
   <div class="wave"></div>
-  <div class="wave2"></div>
 </header>
 
 <nav>
@@ -112,20 +95,20 @@
 </nav>
 
 <section class="section">
-  <h2>🌍 Unlock Global Opportunities</h2>
+  <h2>🛫 Expand Your Region's Global Presence</h2>
   <p>
-    At Global Connections, we design and lead high-impact trade missions that connect your region with international investors, business leaders, and decision-makers.
+    Global Connections designs and leads customized trade missions to connect your region with international investors, business leaders, and decision-makers.
   </p>
   <p>
-    Our missions are tailored to your region’s strengths — helping you attract foreign direct investment, promote key industries, and build meaningful bilateral relationships.
+    Our missions are tailored to your goals — whether you're seeking to attract foreign direct investment, promote key sectors, or strengthen strategic global partnerships.
   </p>
 
-  <h3>✅ What We Deliver:</h3>
+  <h3>✅ What Our Trade Missions Deliver:</h3>
   <ul style="text-align: left; max-width: 600px; margin: 2rem auto;">
     <li>Customized Itineraries</li>
     <li>High-Value Investor Meetings</li>
     <li>Strategic Market Visibility</li>
-    <li>End-to-End Support and Lead Follow-up</li>
+    <li>End-to-End Planning and Support</li>
   </ul>
 </section>
 
