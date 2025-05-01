@@ -25,42 +25,42 @@
     }
 
     .header-content {
-      z-index: 1;
+      z-index: 2;
       position: relative;
       color: white;
     }
 
-    .block-wave {
+    .wave, .wave2 {
       position: absolute;
       bottom: 0;
-      width: 300%;
+      width: 200%;
       height: 100px;
-      display: flex;
-      animation: blockMove 25s linear infinite;
-      z-index: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 20%, transparent 60%);
+      background-repeat: repeat-x;
+      background-size: 1000px 100px;
+      opacity: 0.4;
     }
 
-    .block {
-      width: 100px;
-      height: 100px;
-      background-color: #00BCD4;
-      margin-right: 10px;
-      transform: translateY(0);
+    .wave {
+      animation: waveMove 20s linear infinite;
+      z-index: 1;
     }
 
-    .block:nth-child(odd) {
-      transform: translateY(10px);
-      background-color: #4B0082;
+    .wave2 {
+      animation: waveMoveReverse 30s linear infinite;
+      bottom: 10px;
+      opacity: 0.3;
+      z-index: 1;
     }
 
-    .block:nth-child(even) {
-      transform: translateY(-10px);
-      background-color: #FF7043;
+    @keyframes waveMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 0; }
     }
 
-    @keyframes blockMove {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+    @keyframes waveMoveReverse {
+      0% { background-position: 1000px 0; }
+      100% { background-position: 0 0; }
     }
 
     nav {
@@ -101,15 +101,8 @@
     <h1>International Trade Missions</h1>
     <p>Unlock Global Opportunities Through Targeted Trade Missions</p>
   </div>
-  <div class="block-wave">
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-  </div>
+  <div class="wave"></div>
+  <div class="wave2"></div>
 </header>
 
 <nav>
