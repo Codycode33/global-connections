@@ -6,44 +6,120 @@
   <title>About Us | Global Connections</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Red+Hat+Display:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    body, html {
       margin: 0;
       font-family: 'Poppins', 'Red Hat Display', 'Helvetica', sans-serif;
       background-color: #FFFFFF;
       color: #222222;
     }
-    header {
-      background-color: #4B0082;
-      color: white;
-      padding: 1rem;
+    .animated-header {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      background: linear-gradient(270deg, #4B0082, #00BCD4, #FF7043);
+      background-size: 600% 600%;
+      animation: gradientShift 30s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+    }
+    .wave {
+      position: absolute;
+      bottom: 0;
+      width: 200%;
+      height: 120px;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 20%, transparent 60%);
+      background-repeat: repeat-x;
+      background-size: 1000px 100px;
+      animation: waveMove 30s linear infinite;
+      opacity: 0.5;
+    }
+
+    @keyframes waveMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 0; }
+    }
+    .header-content {
+      z-index: 1;
+      color: white;
+      position: relative;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     nav {
       display: flex;
       justify-content: center;
       background-color: #00BCD4;
-      padding: 0.5rem;
+      padding: 1rem;
     }
     nav a {
       color: white;
-      margin: 0 1rem;
+      margin: 0 1.5rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .hero {
+      background: linear-gradient(to right, #FFFFFF, #F0F8FF);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .cta-button {
+      background-color: #FF7043;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 1rem;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #e65c2e;
     }
     .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .three-columns {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .column {
+      background-color: #F9F9F9;
+      border: 1px solid #DDD;
+      border-radius: 12px;
+      flex: 1 1 30%;
       padding: 2rem;
+      transition: transform 0.3s, background-color 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-    h1, h2 {
-      color: #4B0082;
+    .column:hover {
+      transform: translateY(-5px);
+      background-color: #00BCD4;
+      color: white;
     }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
+    .column a {
+      text-decoration: none;
+      color: inherit;
     }
-    ul li::before {
-      content: '🌱 ';
-      color: #FF7043;
-      font-weight: bold;
+    .column h3 {
+      margin-bottom: 1rem;
     }
     footer {
       background-color: #4B0082;
