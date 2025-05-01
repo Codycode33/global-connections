@@ -16,9 +16,7 @@
       position: relative;
       height: 250px;
       overflow: hidden;
-      background: linear-gradient(270deg, #4B0082, #00BCD4, #FF7043);
-      background-size: 600% 600%;
-      animation: gradientShift 30s ease infinite;
+      background-color: #4B0082;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -35,7 +33,6 @@
       animation: waveMove 30s linear infinite;
       opacity: 0.5;
     }
-
     @keyframes waveMove {
       0% { background-position: 0 0; }
       100% { background-position: 1000px 0; }
@@ -129,7 +126,7 @@
 
 <header class="animated-header">
   <div class="header-content">
-    <h1>Global Connections</h1>
+    <h1 style="font-size:10vw">Global Connections</h1>
     <p>Connecting Regions. Creating Opportunities.</p>
   </div>
   <div class="wave"></div>
@@ -188,3 +185,4 @@
 
 </body>
 </html>
+
