@@ -6,17 +6,32 @@
   <title>Global Connections</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Red+Hat+Display:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    body, html {
       margin: 0;
       font-family: 'Poppins', 'Red Hat Display', 'Helvetica', sans-serif;
       background-color: #FFFFFF;
       color: #222222;
     }
-    header {
-      background-color: #4B0082;
-      color: white;
-      padding: 2rem;
+    .animated-header {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      background: linear-gradient(270deg, #4B0082, #00BCD4, #FF7043);
+      background-size: 600% 600%;
+      animation: gradientShift 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+    }
+    .header-content {
+      z-index: 1;
+      color: white;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     nav {
       display: flex;
@@ -32,14 +47,13 @@
       font-size: 1.1rem;
     }
     .hero {
-      background: linear-gradient(to right, #4B0082, #00BCD4);
-      color: white;
+      background: linear-gradient(to right, #FFFFFF, #F0F8FF);
       text-align: center;
       padding: 4rem 2rem;
     }
     .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     .cta-button {
       background-color: #FF7043;
@@ -50,8 +64,12 @@
       font-size: 1rem;
       cursor: pointer;
       text-decoration: none;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #e65c2e;
     }
     .section {
       padding: 3rem 2rem;
@@ -71,7 +89,7 @@
       border-radius: 12px;
       flex: 1 1 30%;
       padding: 2rem;
-      transition: transform 0.3s;
+      transition: transform 0.3s, background-color 0.3s;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     .column:hover {
@@ -96,60 +114,64 @@
   </style>
 </head>
 <body>
-  <header>
+
+<header class="animated-header">
+  <div class="header-content">
     <h1>Global Connections</h1>
     <p>Connecting Regions. Creating Opportunities.</p>
-  </header>
+  </div>
+</header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
 
-  <section class="hero">
-    <h1>Are you Ready to Elevate Your Region on the Global Stage?</h1>
-    <a class="cta-button" href="contact.html">🌍 Let’s Connect | 🚀 Start Building Global Ties</a>
-  </section>
+<section class="hero">
+  <h1>Are you Ready to Elevate Your Region on the Global Stage?</h1>
+  <a class="cta-button" href="contact.html">🌍 Let’s Connect | 🚀 Start Building Global Ties</a>
+</section>
 
-  <section class="section">
-    <h2>🌍 Who We Are</h2>
-    <p>
-      Global Connections partners with economic development organizations, government authorities, and international institutions to drive global business development and lead generation.
-    </p>
-    <p>
-      We empower your team with the tools, strategies, and global networks needed to attract foreign direct investment (FDI) and elevate your region’s visibility and competitiveness on the world stage.
-    </p>
-    <p>
-      Whether you're aiming to boost business attraction, expand international outreach, or strengthen stakeholder engagement, we provide the expertise and connections to move your mission forward—strategically, effectively, and with impact.
-    </p>
-  </section>
+<section class="section">
+  <h2>🌍 Who We Are</h2>
+  <p>
+    Global Connections partners with economic development organizations, government authorities, and international institutions to drive global business development and lead generation.
+  </p>
+  <p>
+    We empower your team with the tools, strategies, and global networks needed to attract foreign direct investment (FDI) and elevate your region’s visibility and competitiveness on the world stage.
+  </p>
+  <p>
+    Whether you're aiming to boost business attraction, expand international outreach, or strengthen stakeholder engagement, we provide the expertise and connections to move your mission forward—strategically, effectively, and with impact.
+  </p>
+</section>
 
-  <section class="section">
-    <div class="three-columns">
-      <div class="column">
-        <a href="trade-missions.html">
-          <h3>🛫 International Trade Missions</h3>
-          <p>Unlock Global Opportunities Through Targeted Trade Missions</p>
-        </a>
-      </div>
-      <div class="column">
-        <a href="strategic-outreach.html">
-          <h3>🌐 Strategic Outreach & Introductions</h3>
-          <p>Target the Right People. Make the Right Connections.</p>
-        </a>
-      </div>
-      <div class="column">
-        <a href="market-intelligence.html">
-          <h3>📊 Market Intelligence & Business Matchmaking</h3>
-          <p>Make Informed Decisions. Connect with the Right Partners.</p>
-        </a>
-      </div>
+<section class="section">
+  <div class="three-columns">
+    <div class="column">
+      <a href="trade-missions.html">
+        <h3>🛫 International Trade Missions</h3>
+        <p>Unlock Global Opportunities Through Targeted Trade Missions</p>
+      </a>
     </div>
-  </section>
+    <div class="column">
+      <a href="strategic-outreach.html">
+        <h3>🌐 Strategic Outreach & Introductions</h3>
+        <p>Target the Right People. Make the Right Connections.</p>
+      </a>
+    </div>
+    <div class="column">
+      <a href="market-intelligence.html">
+        <h3>📊 Market Intelligence & Business Matchmaking</h3>
+        <p>Make Informed Decisions. Connect with the Right Partners.</p>
+      </a>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Global Connections. All Rights Reserved.</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Global Connections. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
