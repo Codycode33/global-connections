@@ -42,14 +42,20 @@
     }
     nav {
       display: flex;
-      justify-content: center;
+      align-items: center;
       background-color: #00BCD4;
       padding: 1rem;
       position: relative;
+      gap: 1rem;
+    }
+    nav .hamburger {
+      font-size: 2rem;
+      cursor: pointer;
+      user-select: none;
+      margin-right: auto;
     }
     nav a {
       color: white;
-      margin: 0 1.5rem;
       text-decoration: none;
       font-weight: 600;
       font-size: 1.2rem;
@@ -61,23 +67,16 @@
       border-radius: 8px;
       padding: 0.5rem 1rem;
     }
-    .hamburger {
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-      font-size: 2rem;
-      cursor: pointer;
-      user-select: none;
-    }
     .menu {
       display: none;
       flex-direction: column;
       background: #00BCD4;
       position: absolute;
-      right: 1rem;
-      top: 3.5rem;
+      left: 1rem;
+      top: 4rem;
       border: 1px solid #fff;
       border-radius: 5px;
+      z-index: 10;
     }
     .menu a {
       color: white;
@@ -191,15 +190,15 @@
       <h1>Global Connections</h1>
       <p>Connecting Regions. Creating Opportunities.</p>
     </div>
+  </header>
+
+  <nav>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="menu" id="menu">
       <a href="trade-missions.html" onclick="closeMenu()">International Trade Missions</a>
       <a href="strategic-outreach.html" onclick="closeMenu()">Strategic Outreach</a>
       <a href="market-intelligence.html" onclick="closeMenu()">Market Intelligence</a>
     </div>
-  </header>
-
-  <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="contact.html">Contact Us</a>
@@ -251,3 +250,4 @@
   </footer>
 </body>
 </html>
+
