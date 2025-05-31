@@ -6,110 +6,161 @@
   <title>Chamber Partnership Program | Global Connections</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Red+Hat+Display:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body, html {
-      margin: 0;
-      font-family: 'Poppins', 'Red Hat Display', 'Helvetica', sans-serif;
-      background-color: #FFFFFF;
-      color: #222222;
+  body, html {
+    margin: 0;
+    font-family: 'Poppins', 'Red Hat Display', 'Helvetica', sans-serif;
+    background-color: #FFFFFF;
+    color: #222222;
+  }
+
+  .animated-header {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: linear-gradient(270deg, #4B0082, #00BCD4, #FF7043, #4B0082);
+    background-size: 600% 600%;
+    animation: rainbowWave 20s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  @keyframes rainbowWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .header-content {
+    z-index: 2;
+    position: relative;
+    color: white;
+  }
+
+  .header-content h1 {
+    font-size: 3rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00BCD4;
+    padding: 1rem;
+    position: relative;
+    gap: 1.5rem;
+  }
+
+  .hamburger {
+    position: absolute;
+    left: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #00BCD4;
+    position: absolute;
+    left: 1rem;
+    top: 4rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    z-index: 10;
+  }
+
+  .menu a {
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: block;
+  }
+
+  .menu a:hover {
+    background: #0077cc;
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  .section {
+    padding: 4rem 2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1.2s forwards;
+    animation-delay: 0.8s;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background-color: #F9F9F9;
+    border: 1px solid #DDD;
+    border-radius: 12px;
+    flex: 1 1 300px;
+    padding: 2rem;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: #00BCD4;
+    color: white;
+  }
+
+  footer {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .cta-button {
+    background-color: #FF7043;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1rem;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-    .animated-header {
-      position: relative;
-      height: 300px;
-      overflow: hidden;
-      background: linear-gradient(270deg, #4B0082, #00BCD4, #FF7043, #4B0082);
-      background-size: 600% 600%;
-      animation: rainbowWave 20s ease infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    @keyframes rainbowWave {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .header-content {
-      z-index: 2;
-      position: relative;
-      color: white;
-    }
-    .header-content h1 {
-      font-size: 3rem;
-    }
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #00BCD4;
-      padding: 1rem;
-      position: relative;
-      gap: 1.5rem;
-    }
-    .hamburger {
-      position: absolute;
-      left: 1rem;
-      font-size: 2rem;
-      cursor: pointer;
-    }
-    .menu {
-      display: none;
-      flex-direction: column;
-      background: #00BCD4;
-      position: absolute;
-      left: 1rem;
-      top: 4rem;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      z-index: 10;
-    }
-    .menu a {
-      color: white;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      display: block;
-    }
-    .menu a:hover {
-      background: #0077cc;
-    }
-    .nav-center {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.2rem;
-    }
-    .section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-    footer {
-      background-color: #4B0082;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 3rem;
-    }
-    .cta-button {
-      background-color: #FF7043;
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-decoration: none;
-      display: inline-block;
-      margin: 1rem;
-    }
-  </style>
+  }
+</style>
   <script>
     function toggleMenu() {
       const menu = document.getElementById('menu');
@@ -160,24 +211,24 @@
 
 <section class="section">
   <h2>What’s Included</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto;">
-    <div class="column" style="flex: 1 1 300px;">
+  <div class="three-columns">
+    <div class="column">
       <h3>📈 Export Readiness Workshops</h3>
       <p>Co-branded sessions like “Export Essentials” and “Doing Business in [Target Market]” that equip members with actionable insights.</p>
     </div>
-    <div class="column" style="flex: 1 1 300px;">
+    <div class="column">
       <h3>🛫 Member-Only Trade Missions</h3>
       <p>Delegations to priority markets with business matchmaking, briefings, and in-country support — exclusive and discounted for your members.</p>
     </div>
-    <div class="column" style="flex: 1 1 300px;">
+    <div class="column">
       <h3>💬 One-on-One Global Advising</h3>
       <p>Personalized sessions to assess export readiness and craft go-to-market strategies tailored to each business.</p>
     </div>
-    <div class="column" style="flex: 1 1 300px;">
+    <div class="column">
       <h3>🎯 Customized Industry Programs</h3>
       <p>Tailored content and support for high-potential sectors in your region, such as ag-tech, logistics, or clean energy.</p>
     </div>
-    <div class="column" style="flex: 1 1 300px;">
+    <div class="column">
       <h3>🤖 AI-Powered Outreach Tools</h3>
       <p>Use our marketing optimization tool to boost engagement and measure campaign effectiveness — built for small teams.</p>
     </div>
