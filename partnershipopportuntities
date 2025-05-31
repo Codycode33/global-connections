@@ -8,16 +8,20 @@
   <style>
     body, html {
       margin: 0;
-      font-family: 'Poppins', 'Red Hat Display', sans-serif;
-      background-color: #fff;
-      color: #222;
+      font-family: 'Poppins', 'Red Hat Display', 'Helvetica', sans-serif;
+      background-color: #FFFFFF;
+      color: #222222;
     }
-    header {
-      background: linear-gradient(270deg, #4B0082, #00BCD4, #FF7043);
+    .animated-header {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      background: linear-gradient(270deg, #4B0082, #00BCD4, #FF7043, #4B0082);
       background-size: 600% 600%;
       animation: rainbowWave 20s ease infinite;
-      color: white;
-      padding: 5rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
     }
     @keyframes rainbowWave {
@@ -25,130 +29,129 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-    .cta-buttons {
-      margin-top: 2rem;
-    }
-    .cta-buttons a {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: #FF7043;
+    .header-content {
+      z-index: 2;
+      position: relative;
       color: white;
-      margin: 0.5rem;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: background 0.3s;
     }
-    .cta-buttons a:hover {
-      background-color: #e65c2e;
+    .header-content h1 {
+      font-size: 3rem;
     }
-    .benefits {
+    nav {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      background-color: #00BCD4;
+      padding: 1rem;
+      position: relative;
+      gap: 1.5rem;
+    }
+    .hamburger {
+      position: absolute;
+      left: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      background: #00BCD4;
+      position: absolute;
+      left: 1rem;
+      top: 4rem;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      z-index: 10;
+    }
+    .menu a {
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      display: block;
+    }
+    .menu a:hover {
+      background: #0077cc;
+    }
+    .nav-center {
+      display: flex;
+      align-items: center;
       gap: 2rem;
     }
-    .card {
-      flex: 1 1 250px;
-      background: #f4f4f4;
-      padding: 1.5rem;
-      border-radius: 12px;
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 4rem 2rem;
       text-align: center;
     }
-    .form-section input, .form-section select {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
     }
-    .form-section button {
-      background-color: #00BCD4;
+    footer {
+      background-color: #4B0082;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+    .cta-button {
+      background-color: #FF7043;
       color: white;
       padding: 1rem 2rem;
       border: none;
       border-radius: 8px;
       font-size: 1rem;
-      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1rem;
     }
   </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+    function closeMenu() {
+      document.getElementById('menu').style.display = 'none';
+    }
+  </script>
 </head>
 <body>
+  <header class="animated-header">
+    <div class="header-content">
+      <h1>Empowering Your Organization. Expanding Business. Growing Global</h1>
+      <p>Offer your members access to international markets while generating new revenue and visibility for your organization.</p>
+    </div>
+  </header>
 
-<header>
-  <h1>Empowering Your Organization. Expanding Business. Growing Global</h1>
-  <p>Offer your members access to international markets while generating new revenue and visibility for your organization.</p>
-</header>
+  <nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+      <a href="chamber-partnership.html" onclick="closeMenu()">Chamber Partnership</a>
+      <a href="trade-missions.html" onclick="closeMenu()">International Trade Missions</a>
+      <a href="strategic-outreach.html" onclick="closeMenu()">Strategic Outreach</a>
+      <a href="market-intelligence.html" onclick="closeMenu()">Market Intelligence</a>
+    </div>
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
 
-<section class="section">
-  <p>Global Connections empowers your members to expand internationally — while strengthening your organization’s reach, relevance, and revenue.</p>
-  <p>Through a strategic partnership with Global Connections, your organization can offer practical, high-impact programs that help businesses explore international markets, connect with global partners, and grow with confidence...</p>
-  <div class="cta-buttons">
-    <a href="#">Schedule a Discovery Call</a>
-    <a href="#">Download Program Overview</a>
-  </div>
-</section>
+  <section class="section">
+    <h2>Global Connections empowers your members to expand internationally — while strengthening your organization’s reach, relevance, and revenue.</h2>
+    <p>Through a strategic partnership with Global Connections, your organization can offer practical, high-impact programs that help businesses explore international markets, connect with global partners, and grow with confidence. Our turnkey approach delivers real value to your members — while positioning your organization as a driver of innovation, global competitiveness, and economic development. At the same time, our team helps to unlock new non-dues revenue streams, raise your organization's profile, and increase member engagement with minimal lift from your team.</p>
+    <a class="cta-button" href="#">Schedule a Discovery Call</a>
+    <a class="cta-button" href="#">Download Program Overview</a>
+  </section>
 
-<section class="section">
-  <h2>We Help Your Organization Enter the Global Stage</h2>
-  <p>Most companies are looking beyond the U.S. for growth—but they need trusted guidance...</p>
-  <div class="benefits">
-    <div class="card">📈 International Trade, Import and Export Readiness Workshops</div>
-    <div class="card">🛫 Member-Only International Trade Missions</div>
-    <div class="card">💰 One-on-One Global Advising</div>
-    <div class="card">📊 Strategic and Sector Alignment with Customized Industry Tracks</div>
-    <div class="card">🌎 AI Powered Outreach and Support</div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Our Partnership Provides A Win-Win Model</h2>
-  <ul>
-    <li>Tangible business wins for members</li>
-    <li>Revenue sharing opportunities for your organization</li>
-    <li>Co-branded programming, visibility, and thought leadership</li>
-    <li>Scalable services without added staffing</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Start with a No-Cost Pilot</h2>
-  <p>Launch an export workshop or info session to engage members and build momentum — no commitment required.</p>
-  <div class="cta-buttons">
-    <a href="#">Book a Strategy Call</a>
-    <a href="#">View Sample Pilot Agenda</a>
-  </div>
-</section>
-
-<section class="section form-section">
-  <h2>Get in Touch</h2>
-  <form>
-    <input type="text" placeholder="Name" required>
-    <input type="text" placeholder="Title" required>
-    <input type="text" placeholder="Organization" required>
-    <input type="email" placeholder="Email" required>
-    <input type="text" placeholder="Phone Number">
-    <input type="text" placeholder="City, State">
-    <button type="submit">Submit</button>
-  </form>
-</section>
-
+  <footer>
+    <p>&copy; 2025 Global Connections. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
