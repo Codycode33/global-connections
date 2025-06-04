@@ -133,36 +133,58 @@
       animation: fadeIn 1.2s forwards;
       animation-delay: 0.8s;
     }
-    .three-columns {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .column {
-      background-color: #F9F9F9;
-      border: 1px solid #DDD;
-      border-radius: 12px;
-      flex: 1 1 30%;
-      padding: 2rem;
-      transition: transform 0.3s, background-color 0.3s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    .column:hover {
-      transform: translateY(-5px);
-      background-color: #00BCD4;
-      color: white;
-    }
-    .column a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .column h3 {
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-    }
+    .columns-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wide-column {
+  background-color: #F9F9F9;
+  border: 1px solid #DDD;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.wide-column:hover {
+  transform: translateY(-5px);
+  background-color: #00BCD4;
+  color: white;
+}
+.wide-column a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.three-small-columns {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.small-column {
+  flex: 1 1 30%;
+  background-color: #F9F9F9;
+  border: 1px solid #DDD;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.small-column:hover {
+  transform: translateY(-5px);
+  background-color: #00BCD4;
+  color: white;
+}
+.small-column a {
+  text-decoration: none;
+  color: inherit;
+}
     footer {
       background-color: #00BCD4;
       color: white;
@@ -233,33 +255,35 @@
   </section>
 
   <section class="section">
-    <div class="three-columns">
-      <div class="column">
-        <a href="partnershipopportunities.html">
-          <h3>🤝 High-Impact International Programming</h3>
-          <p>Empower Members. Generate Revenue. Expand Globally.</p>
-        </a>
-      </div>
-      <div class="column">
+  <div class="columns-wrapper">
+    <div class="wide-column">
+      <a href="partnershipopportunities.html">
+        <h3>🤝 High-Impact International Programming</h3>
+        <p>Empower Members. Generate Revenue. Expand Globally.</p>
+      </a>
+    </div>
+    <div class="three-small-columns">
+      <div class="small-column">
         <a href="trade-missions.html">
           <h3>🛫 International Trade Missions</h3>
           <p>Unlock Global Opportunities Through Targeted Trade Missions</p>
         </a>
       </div>
-      <div class="column">
+      <div class="small-column">
         <a href="strategic-outreach.html">
           <h3>🌐 Strategic Outreach & Introductions</h3>
           <p>Target the Right People. Make the Right Connections.</p>
         </a>
       </div>
-      <div class="column">
+      <div class="small-column">
         <a href="market-intelligence.html">
           <h3>📊 Market Intelligence & Business Matchmaking</h3>
           <p>Make Informed Decisions. Connect with the Right Partners.</p>
         </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <p>&copy; 2025 Global Connections. All Rights Reserved.</p>
