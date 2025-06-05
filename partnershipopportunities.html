@@ -142,35 +142,51 @@
     margin-top: 3rem;
   }
 
-  .cta-button-group {
+  .cta-button-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
     margin-top: 2rem;
   }
 
-  .cta-button-group a {
+  .cta-button-single,
+  .cta-button-pair a {
+    width: 280px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 280px;
-    height: 60px;
-    text-align: center;
-    background-color: #FF7043;
-    color: white;
-    border: none;
     border-radius: 8px;
     font-size: 1rem;
+    font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    color: white;
   }
 
-  .cta-button-group a.secondary {
+  .cta-button-single {
+    background-color: #FF7043;
+  }
+
+  .cta-button-single:hover {
+    background-color: #e65c2e;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #FF7043;
+    }
+
+  .cta-button-pair {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cta-button-pair a {
     background-color: #00BCD4;
   }
 
-  .cta-button-group a:hover {
+  .cta-button-pair a:hover {
     background-color: #e65c2e;
       transform: scale(1.05);
       box-shadow: 0 0 15px #FF7043;
@@ -262,10 +278,11 @@
   
   <p>Our turnkey approach delivers real value to your members — while positioning your organization as a driver of innovation, global competitiveness, and economic development. At the same time, our team helps to unlock new non-dues revenue streams, raise your organization's profile, and increase member engagement with minimal lift from your team.</p>
   
-  <div class="cta-button-group">
-    <a href="contact.html">Schedule a Discovery Call</a><br><br>
-    <a href="EDOProgramOverview.pdf" download class="secondary">Download EDO Program Overview</a>
-    <a href="ChamberProgramOverview.pdf" download class="secondary">Download Chamber Program Overview</a>
+  <div class="cta-button-wrapper">
+  <a class="cta-button-single" href="contact.html">Schedule a Discovery Call</a>
+  <div class="cta-button-pair">
+    <a href="EDOProgramOverview.pdf" download>Download EDO Program Overview</a>
+    <a href="ChamberProgramOverview.pdf" download>Download Chamber Program Overview</a>
   </div>
 </section>
 
