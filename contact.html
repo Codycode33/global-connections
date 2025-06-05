@@ -137,6 +137,45 @@
       transform: scale(1.05);
       box-shadow: 0 0 15px #FF7043;
     }
+    .contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  padding: 1rem;
+  background-color: #00BCD4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #009bb3;
+}    
   </style>
   <script>
     function toggleMenu() {
@@ -188,9 +227,21 @@
   <h3>📧 Connect With Us:</h3>
   <ul style="text-align: left; max-width: 600px; margin: 2rem auto;">
     <li><strong>Email:</strong> mara@global-connections.us</li>
-    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mara-pernick-6baa4a2a/" target="_blank">Follow Us on LinkedIn</a></li>
+    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mara-pernick-6baa4a2a/" target="_blank">Connect with Us on LinkedIn</a></li>
   </ul>
   <a class="cta-button" href="mailto:mara@global-connections.us">Start the Conversation →</a>
+  <h2>Let's Work Together</h2>
+  <div class="contact-form">
+    <form action="https://formspree.io/f/xjkrvoop" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="title" placeholder="Your Title" required>
+      <input type="text" name="Organization" placeholder="Your Organization" required>
+      <input type="text" name="Location" placeholder="Location: City, State" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
 </section>
 
 <footer>
