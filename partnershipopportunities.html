@@ -142,24 +142,40 @@
     margin-top: 3rem;
   }
 
-  .cta-button {
-      background-color: #FF7043;
-      color: white;
-      padding: 1.2rem 2.5rem;
-      border: none;
-      border-radius: 10px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      text-decoration: none;
-      margin-top: 1rem;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-    .cta-button:hover {
-      background-color: #e65c2e;
+  .cta-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .cta-button-group a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 60px;
+    text-align: center;
+    background-color: #FF7043;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button-group a.secondary {
+    background-color: #00BCD4;
+  }
+
+  .cta-button-group a:hover {
+    background-color: #e65c2e;
       transform: scale(1.05);
       box-shadow: 0 0 15px #FF7043;
     }
+
 
   @keyframes fadeIn {
     to {
@@ -246,9 +262,11 @@
   
   <p>Our turnkey approach delivers real value to your members — while positioning your organization as a driver of innovation, global competitiveness, and economic development. At the same time, our team helps to unlock new non-dues revenue streams, raise your organization's profile, and increase member engagement with minimal lift from your team.</p>
   
-  <a class="cta-button" href="contact.html">Schedule a Discovery Call</a><br><br>
-  <a class="cta-button" href="EDOProgramOverview.pdf" download style="background-color: #00BCD4; color: white;">Download EDO Program Overview</a>
-  <a class="cta-button" href="ChamberProgramOverview.pdf" download style="background-color: #00BCD4; color: white;">Download Chamber Program Overview</a>
+  <div class="cta-button-group">
+    <a href="contact.html">Schedule a Discovery Call</a>
+    <a href="EDOProgramOverview.pdf" download class="secondary">Download EDO Program Overview</a>
+    <a href="ChamberProgramOverview.pdf" download class="secondary">Download Chamber Program Overview</a>
+  </div>
 </section>
 
   <section class="section">
